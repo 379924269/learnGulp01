@@ -1,0 +1,17 @@
+{
+  "name": "learngulp01",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "huazai"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

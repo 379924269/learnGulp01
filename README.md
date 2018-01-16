@@ -1,2 +1,1 @@
-# learnGulp01
-gulp前段自动化构建学习
+#gulp + bower自动化构建前段学习
