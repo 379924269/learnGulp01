@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../dist/lib/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!--<form action="" role="form">-->
+<!--<div class="formGroup">-->
+<!--<lable for="name">名称</lable>-->
+<!--<input class="form-control" id="name" type="text" placeholder="请输入姓名">-->
+<!--</div>-->
+<!--<div class="formGroup">-->
+<!--<lable for="inputfile">请输入文件名称</lable>-->
+<!--<input id="name" type="file">-->
+<!--<p class="help-block">这里是块级帮助模块</p>-->
+<!--</div>-->
+<!--<div class="formGroup">-->
+<!--<lable for="name"><input type="checkbox">请打勾</lable>-->
+<!--<button class="btn btn-default btn-success">提交</button>-->
+<!--</div>-->
+<!--</form>-->
+<div>
+    <p>关闭图标实例
+        <button class="close" aria-hidden="true"/>&bigstar;
+    </p>
+</div>
+<div class="pull-left">
+    向左快速浮动
+</div>
+<div class="pull-right">
+    向右快速浮动
+</div>
+
+<form class="form-horizontal text-center" role="form">
+    <div class="form-group">
+        <lable for="name">名称</lable>
+        <input type="text" class="form-control" id="name" placeholder="请输入姓名">
+    </div>
+    <div class="form-group">
+        <lable class="sr-only" for="inputfile">请输入文件名称</lable>
+        <input type="file" id="inputfile">
+    </div>
+    <div class="checkbox">
+        <lable><input type="checkbox">请打勾</lable>
+    </div>
+    <button type="submit" class="btn btn-success">提交</button>
+</form>
+
+
+<label>默认单选框或复选框</label>
+
+<div class="checkbox">
+    <label><input type="checkbox">选项1</label>
+</div>
+<div class="checkbox">
+    <label><input type="checkbox">选项2</label>
+</div>
+<div class="radio">
+    <label><input type="radio" id="optionsRadio" name="optionsRadio" value="option1">选项1</label>
+</div>
+<div class="radio">
+    <label><input type="radio" id="optionsRadio1" name="optionsRadio" value="option2">选项2, 他会取消1的选项</label>
+</div>
+<div>
+    <label class="checkbox-inline"><input type="checkbox" id="checkboxInline1" value="option1">选项1</label>
+    <label class=" checkbox-inline"><input type="checkbox" id="checkboxInline2" value="option2">选项1</label>
+    <label class=" checkbox-inline"><input type="checkbox" id="checkboxInline3" value="option3">选项1</label>
+    <label class=" radio-inline"><input type="radio" id="radioInline" name="optionsRadio">选项1</label>
+    <label class=" radio-inline"><input type="radio" id="radioInline2" name="optionsRadio">选项2</label>
+</div>
+
+<form role="form">
+    <div class="form-group">
+        <label for="name">选择列表</label>
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <label for="name">多选择列表</label>
+        <select multiple class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+</form>
+
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">email:</label>
+        <label class="col-sm-10 form-control-static">huazai@qq.com</label>
+    </div>
+    <div class="form-group">
+        <label for="inputPassward" class="col-sm-2 control-label">密码:</label>
+
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassward" placeholder="请输入密码">
+        </div>
+    </div>
+</form>
+
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">聚焦</label>
+        <input id="focusInput" class="col-sm-10 form-control" type="text" value="该输入框获得焦点">
+    </div>
+    <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">禁用</label>
+        <input id="password" class="col-sm-10 form-control" type="text" placeholder="该框禁止输入">
+    </div>
+    <fieldset disabled>
+        <div class="form-group">
+            <label for="disabledTextInput" class="col-sm-2 control-label">禁用输入（Fieldset disabled）</label>
+
+            <div class="col-sm-10">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="select" class="col-sm-2 control-label">禁用输入（Fieldset disabled）</label>
+
+            <div class="col-sm-10">
+                <select id="select" class="form-control">
+                    <option>1</option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <div class="form-group has-success">
+        <label class="col-sm-2 control-label" for="inputSuccess">输入成功</label>
+
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputSuccess">
+        </div>
+    </div>
+    </div>
+</form>
+
+<form role="form">
+    <div class="form-group">
+        <input class="form-control input-lg" type="text" placeholder="大">
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="默认">
+    </div>
+    <div class="form-group">
+        <input class="form-control input-sm" type="text" placeholder="小">
+    </div>
+    <div class="form-group"></div>
+    <div class="form-group">
+        <select class="form-control input-lg">
+            <option>大</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control">
+            <option>默认</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="form-control input-sm">
+            <option>小</option>
+        </select>
+    </div>
+    <div class="form-group"></div>
+</form>
+
+<form role="form">
+    <span>帮助文档实例</span>
+    <input class="form-control" type="text" placeholder="niahoa">
+    <span class="help-block">都浪费空间阿斯达斯蒂芬静安寺来得快撒旦路口附近阿斯顿飞</span>
+</form>
+
+
+<!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
+<script type="application/javascript" src="../../dist/lib/jquery/jquery.min.js"></script>
+<script type="application/javascript" src="../../dist/lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -73,6 +73,12 @@ gulp.task('html', function () {
         .pipe(gulp.dest(destPath.html));
 });
 
+//移动bootstrap中的字体
+gulp.task('removeFont', function () {
+    return gulp.src("bower_components/bootstrap/dist/fonts/*")
+        .pipe(gulp.dest("dist/lib/bootstrap/fonts/"));
+});
+
 // 样式处理
 gulp.task('sass', function () {
     return sass(srcPath.css, {style: 'compact', sourcemap: true}) // 指明源文件路径、并进行文件匹配（编译风格：简洁格式）
