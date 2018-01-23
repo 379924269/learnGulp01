@@ -3,38 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="application/javascript" src="../../dist/lib/jquery/jquery.min.js"></script>
-    <script type="application/javascript" src="../../dist/lib/bootstrap/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../../dist/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron">
-        <h1>我的第一个bootstrap页面</h1>
-        <p>重置窗口大小查看响应式效果</p>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <h3>第一行</h3>
-            <p>学的不仅是技术，更是梦想</p>
-            <p>在牛逼的梦想也顶不住的傻逼的坚持</p>
+
+<form class="form-horizontal">
+    <fieldset>
+        <div id="legend" class="">
+            <legend class="">登陆</legend>
         </div>
-        <div class="col-sm-4">
-            <h3>第二行</h3>
-            <p>学的不仅是技术，更是梦想</p>
-            <p>在牛逼的梦想也顶不住的傻逼的坚持</p>
+
+
+        <div class="control-group">
+
+            <!-- Text input-->
+            <label class="control-label" for="inputUserName">用户名称</label>
+
+            <div class="controls">
+                <input id="inputUserName" type="text" placeholder="placeholder" class="input-xlarge">
+
+                <p class="help-block text-danger">必须填字段</p>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <h3>第三行</h3>
-            <p>学的不仅是技术，更是梦想</p>
-            <p>在牛逼的梦想也顶不住的傻逼的坚持</p>
+
+        <div class="control-group">
+
+            <!-- Text input-->
+            <label class="control-label" for="inputPassword">密码</label>
+
+            <div class="controls">
+                <input id="inputPassword" type="password" placeholder="placeholder" class="input-xlarge">
+
+                <p class="help-block">密码必须填</p>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <h3>第三行</h3>
-            <p>学的不仅是技术，更是梦想</p>
-            <p>在牛逼的梦想也顶不住的傻逼的坚持</p>
+
+        <div class="control-group">
+            <label class="control-label">提交</label>
+
+            <!-- Button -->
+            <div class="controls">
+                <button class="btn btn-success">提交</button>
+            </div>
+            <label class="control-label">重置</label>
+
+            <!-- Button -->
+            <div class="controls">
+                <button class="btn btn-success">重置</button>
+            </div>
         </div>
-    </div>
-</div>
+
+    </fieldset>
+</form>
+
+
+
+<script type="application/javascript" src="../lib/jquery/jquery.min.js"></script>
+<script type="application/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>

@@ -131,14 +131,16 @@ gulp.task('webserver', function () {
 
 // 监听任务
 gulp.task('watch', function () {
-    // 监听 html
-    gulp.watch(srcPath.html + '/**/*.html', ['html'])
-    // 监听 scss
-    gulp.watch(srcPath.css + '/*.scss', ['sass']);
-    // 监听 images
-    gulp.watch(srcPath.image + '/**/*', ['images']);
-    // 监听 js
-    gulp.watch([srcPath.script + '/*.js', '!' + srcPath.script + '/*.min.js'], ['script']);
+    //// 监听 html
+    //gulp.watch(srcPath.html + '/**/*.html', ['html'])
+    //// 监听 scss
+    //gulp.watch(srcPath.css + '/*.scss', ['sass']);
+    //// 监听 images
+    //gulp.watch(srcPath.image + '/**/*', ['images']);
+    //// 监听 js
+    //gulp.watch([srcPath.script + '/*.js', '!' + srcPath.script + '/*.min.js'], ['script']);
+    //这个地方还没写完，比如js，css，image
+    gulp.watch(srcPath.html + '/**/*.html', ['pushAllToDist'])
 });
 // 默认任务
 gulp.task('default', ['webserver', 'watch']);
@@ -147,9 +149,25 @@ gulp.task('default', ['webserver', 'watch']);
  -------------------------------------------------------------- */
 // 清理文件
 gulp.task('clean', function () {
-    return gulp.src([destPath.css + '/maps', destPath.script + '/maps'], {read: false}) // 清理maps文件
-        .pipe(clean());
+    //return gulp.src([destPath.css + '/maps', destPath.script + '/maps'], {read: false}) // 清理maps文件
+    //    .pipe(clean());
+    return gulp.src(["dist/*", "dist/**/*"]).pipe(clean());
 });
+
+//把开发的所有文件移动到dist部署
+gulp.task("pushAllToDist", function () {
+    gulp.src("src/**")
+        .pipe(gulp.dest("dist"));
+});
+
+//addLib添加库文件
+gulp.task('createLib', function() {
+    gulp.src('./bower_components/bootstrap/dist/**/*')
+        .pipe(gulp.dest('./src/lib/bootstrap/'));
+    gulp.src('./bower_components/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest('./src/lib/jquery/'));
+});
+
 
 // 样式处理
 gulp.task('sassRelease', function () {
@@ -171,6 +189,7 @@ gulp.task('scriptRelease', function () {
 gulp.task('release', ['clean'], function () { // 开始任务前会先执行[clean]任务
     return gulp.start('sassRelease', 'scriptRelease', 'images'); // 等[clean]任务执行完毕后再执行其他任务
 });
+
 
 /* = 帮助提示( Help )
  -------------------------------------------------------------- */

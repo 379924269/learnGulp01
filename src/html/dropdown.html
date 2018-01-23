@@ -5,7 +5,7 @@
     <!-- 包含头部信息用于适应不同设备 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-    <link rel="stylesheet" href="../../dist/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 <!--下拉选框-->
@@ -33,8 +33,32 @@
     </ul>
 </div>
 
+<div class="btn-group">
+    <button type="button" class="btn btn-success">按钮1</button>
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">功能</a></li>
+        <li><a href="#">功能1</a></li>
+        <li><a href="#">功能2</a></li>
+        <li><a href="#" class="divider"></a></li>
+        <li><a href="#">功能3</a></li>
+    </ul>
+    </div>
+<div class="btn-group">
+    <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">按钮1<span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">功能</a></li>
+        <li><a href="#">功能1</a></li>
+        <li><a href="#">功能2</a></li>
+        <li><a href="#" class="divider"></a></li>
+        <li><a href="#">功能3</a></li>
+    </ul>
+</div>
+
+
 <!-- JavaScript 放置在文档最后面可以使页面加载速度更快 -->
-<script type="application/javascript" src="../../dist/lib/jquery/jquery.min.js"></script>
-<script type="application/javascript" src="../../dist/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="application/javascript" src="../lib/jquery/jquery.min.js"></script>
+<script type="application/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

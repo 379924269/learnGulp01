@@ -1,5 +1,11 @@
 #gulp + bower自动化构建前段学习
 
+##搭建环境
+    ([参考地址]http://www.ydcss.com/archives/18)
+##bower加载库文件
+     [参考地址]https://segmentfault.com/a/1190000002971135
+
+
 
 ##安装插件
 
